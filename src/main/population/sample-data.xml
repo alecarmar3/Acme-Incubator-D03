@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+- sample-data.xml
+-
+- Copyright (c) 2019 Rafael Corchuelo.
+-
+- In keeping with the traditional purpose of furthering education and research, it is
+- the policy of the copyright owner to permit non-commercial use and redistribution of
+- this software. It has been tested carefully, but it is not guaranteed for any particular
+- purposes.  The copyright owner does not offer any warranties or representations, nor do
+- they accept any liabilities with respect to them.
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<import resource="conversion-service.xml" />
+	
+	
+	<!-- Bulletins -->
+	
+	<bean name="bulletin1" class="acme.entities.Bulletin">
+		<property name="author" value="Bad Bunny"/>
+		<property name="title" value="Safaera"/>
+		<property name="text" value="Trending song"/>
+		<property name="moment" value="2020/04/04 18:07"/>
+		<property name="category" value="Music"/>
+	</bean>
+	
+	<bean name="bulletin2" class="acme.entities.Bulletin">
+		<property name="author" value="Colton Joy"/>
+		<property name="title" value="The Photo"/>
+		<property name="text" value="Winner of PhotoWorld 2016"/>
+		<property name="moment" value="2017/11/12 9:30"/>
+		<property name="category" value="Photography"/>
+	</bean>
+	
+	<bean name="bulletin3" class="acme.entities.Bulletin">
+		<property name="author" value="Nilbert Ghomus"/>
+		<property name="title" value="Little by little"/>
+		<property name="text" value="Bestseller"/>
+		<property name="moment" value="2019/09/26 12:45"/>
+		<property name="category" value="Literature"/>
+	</bean>
+	
+	<!-- Notices -->
+	
+	<bean name="notice1" class="acme.entities.Notice">
+		<property name="headerPicture" value="http://www.headerPicture1.com"/>
+		<property name="title" value="title1"/>
+		<property name="creationDate" value="2018/05/02 12:00"/>
+		<property name="deadline" value="2020/04/11 18:07"/>
+		<property name="body" value="This is a body 1"/>
+		<property name="webLinks" value="http://www.link1.com"/>
+	</bean>
+	
+	<bean name="notice2" class="acme.entities.Notice">
+		<property name="headerPicture" value="http://www.headerPicture2.com"/>
+		<property name="title" value="title2"/>
+		<property name="creationDate" value="2018/12/12 13:00"/>
+		<property name="deadline" value="2020/08/09 19:00"/>
+		<property name="body" value="This is a body 2"/>
+		<property name="webLinks" value="http://www.link1.com"/>
+	</bean>
+	
+	<bean name="notice3" class="acme.entities.Notice">
+		<property name="headerPicture" value="http://www.headerPicture3.com"/>
+		<property name="title" value="title3"/>
+		<property name="creationDate" value="2017/09/10 20:45"/>
+		<property name="deadline" value="2021/02/10 12:00"/>
+		<property name="body" value="This is a body 3"/>
+		<property name="webLinks" value="http://www.link1.com"/>
+	</bean>
+	
+	<!-- Technology Records -->
+	
+	<bean name="technologyRecord1" class="acme.entities.TechnologyRecord">
+		<property name="title" value="Technology title 1"/>
+		<property name="activitySector" value="Technology"/>
+		<property name="inventorName" value="Kfun Lai"/>
+		<property name="description" value="This is a description 1"/>
+		<property name="website" value="http://www.website1.com"/>
+		<property name="email" value="kfunlai@gmail.com"/>
+		<property name="sourceType">
+		<value>OPEN_SOURCE</value>
+		</property>
+		<property name="stars" value="3"/>
+	</bean>
+	
+	<bean name="technologyRecord2" class="acme.entities.TechnologyRecord">
+		<property name="title" value="Technology title 2"/>
+		<property name="activitySector" value="Health"/>
+		<property name="inventorName" value="Devin Kicht"/>
+		<property name="description" value="This is a description 2"/>
+		<property name="website" value="http://www.website2.com"/>
+		<property name="email" value="devinkicht@gmail.com"/>
+		<property name="sourceType">
+		<value>OPEN_SOURCE</value>
+		</property>
+		<property name="stars" value="-2"/>
+	</bean>
+	
+	<bean name="technologyRecord3" class="acme.entities.TechnologyRecord">
+		<property name="title" value="Technology title 3"/>
+		<property name="activitySector" value="Health"/>
+		<property name="inventorName" value="Alberto Gil"/>
+		<property name="description" value="This is a description 3"/>
+		<property name="website" value="http://www.website3.com"/>
+		<property name="email" value="albertogil@gmail.com"/>
+		<property name="sourceType">
+		<value>CLOSED_SOURCE</value>
+		</property>
+		<property name="stars" value="0"/>
+	</bean>
+	
+	<bean name="technologyRecord4" class="acme.entities.TechnologyRecord">
+		<property name="title" value="Technology title 4"/>
+		<property name="activitySector" value="Health"/>
+		<property name="inventorName" value="Claire Monch"/>
+		<property name="description" value="This is a description 4"/>
+		<property name="website" value="http://www.website4.com"/>
+		<property name="email" value="clairemonch@gmail.com"/>
+		<property name="sourceType">
+		<value>CLOSED_SOURCE</value>
+		</property>
+		<property name="stars" value="3"/>
+	</bean>
+	
+	<!-- Tool Records -->
+	
+	<bean name="toolRecord1" class="acme.entities.ToolRecord">
+		<property name="title" value="Tool title 1"/>
+		<property name="activitySector" value="Technology"/>
+		<property name="inventorName" value="Luh Albeiro"/>
+		<property name="description" value="This is a description 1"/>
+		<property name="website" value="http://www.website1.com"/>
+		<property name="email" value="luhalbeiro@gmail.com"/>
+		<property name="sourceType">
+		<value>CLOSED_SOURCE</value>
+		</property>
+		<property name="stars" value="0"/>
+	</bean>
+	
+	<bean name="toolRecord2" class="acme.entities.ToolRecord">
+		<property name="title" value="Tool title 2"/>
+		<property name="activitySector" value="Arts"/>
+		<property name="inventorName" value="Michael Luks"/>
+		<property name="description" value="This is a description 2"/>
+		<property name="website" value="http://www.website2.com"/>
+		<property name="email" value="michaelluks@gmail.com"/>
+		<property name="sourceType">
+		<value>CLOSED_SOURCE</value>
+		</property>
+		<property name="stars" value="-5"/>
+	</bean>
+	
+	<bean name="toolRecord3" class="acme.entities.ToolRecord">
+		<property name="title" value="Tool title 3"/>
+		<property name="activitySector" value="Business"/>
+		<property name="inventorName" value="Gloria Estevez"/>
+		<property name="description" value="This is a description 3"/>
+		<property name="website" value="http://www.website3.com"/>
+		<property name="email" value="gloriaestevez@gmail.com"/>
+		<property name="sourceType">
+		<value>CLOSED_SOURCE</value>
+		</property>
+		<property name="stars" value="4"/>
+	</bean>
+	
+	<bean name="toolRecord4" class="acme.entities.ToolRecord">
+		<property name="title" value="Tool title 4"/>
+		<property name="activitySector" value="Health"/>
+		<property name="inventorName" value="Rich Philips"/>
+		<property name="description" value="This is a description 4"/>
+		<property name="website" value="http://www.website4.com"/>
+		<property name="email" value="richpghilips@gmail.com"/>
+		<property name="sourceType">
+		<value>CLOSED_SOURCE</value>
+		</property>
+		<property name="stars" value="-1"/>
+	</bean>
+	
+	<!-- Inquiries -->
+	
+	<bean name="inquiry1" class="acme.entities.Inquiry">
+		<property name="title" value="Inquiry 1"/>
+		<property name="creationDate" value="2016/01/14 12:00"/>
+		<property name="deadline" value="2019/11/28 12:00"/>
+		<property name="body" value="This is a body 1"/>
+		<property name="moneyMin" value="00000600.00 EUR"/>
+		<property name="moneyMax" value="00001400.00 EUR"/>
+		<property name="email" value="inquiry1@gmail.com"/>
+	</bean>
+	
+	<bean name="inquiry2" class="acme.entities.Inquiry">
+		<property name="title" value="Inquiry 2"/>
+		<property name="creationDate" value="2019/12/04 12:00"/>
+		<property name="deadline" value="2020/11/01 12:00"/>
+		<property name="body" value="This is a body 2"/>
+		<property name="moneyMin" value="00000100.00 EUR"/>
+		<property name="moneyMax" value="00000300.00 EUR"/>
+		<property name="email" value="inquiry2@gmail.com"/>
+	</bean>
+	
+	<bean name="inquiry3" class="acme.entities.Inquiry">
+		<property name="title" value="Inquiry 3"/>
+		<property name="creationDate" value="2020/06/13 12:00"/>
+		<property name="deadline" value="2020/09/30 12:00"/>
+		<property name="body" value="This is a body 3"/>
+		<property name="moneyMin" value="00001600.00 EUR"/>
+		<property name="moneyMax" value="00002500.00 EUR"/>
+		<property name="email" value="inquiry3@gmail.com"/>
+	</bean>
+	
+	<!-- Overtures -->
+	
+	<bean name="overture1" class="acme.entities.Overture">
+		<property name="title" value="Overture 1"/>
+		<property name="creationDate" value="2016/01/14 12:00"/>
+		<property name="deadline" value="2019/11/28 12:00"/>
+		<property name="body" value="This is a body 1"/>
+		<property name="moneyMin" value="00000100.00 EUR"/>
+		<property name="moneyMax" value="0000150.00 EUR"/>
+		<property name="email" value="overture1@gmail.com"/>
+	</bean>
+	
+	<bean name="overture2" class="acme.entities.Overture">
+		<property name="title" value="Overture 2"/>
+		<property name="creationDate" value="2019/12/04 12:00"/>
+		<property name="deadline" value="2020/11/01 12:00"/>
+		<property name="body" value="This is a body 2"/>
+		<property name="moneyMin" value="00000800.00 EUR"/>
+		<property name="moneyMax" value="00000975.00 EUR"/>
+		<property name="email" value="overture2@gmail.com"/>
+	</bean>
+	
+	<bean name="overture3" class="acme.entities.Overture">
+		<property name="title" value="Overture 3"/>
+		<property name="creationDate" value="2020/06/13 12:00"/>
+		<property name="deadline" value="2020/09/30 12:00"/>
+		<property name="body" value="This is a body 3"/>
+		<property name="moneyMin" value="00001500.00 EUR"/>
+		<property name="moneyMax" value="00002000.00 EUR"/>
+		<property name="email" value="overture3@gmail.com"/>
+	</bean>
+	
+	<!-- Challenges -->
+	
+	<bean name="challenge1" class="acme.entities.Challenge">
+		<property name="title" value="This is challenge 1"/>
+		<property name="deadline" value="2021/01/14 12:00"/>
+		<property name="description" value="This is the description 1"/>
+		<property name="expertGoal" value="Do this one"/>
+		<property name="averageGoal" value="Do that second"/>
+		<property name="rookieGoal" value="Do whatever third"/>
+		<property name="expertReward" value="00001400.00 EUR"/>
+		<property name="averageReward" value="00001000.00 EUR"/>
+		<property name="rookieReward" value="00000400.00 EUR"/>
+	</bean>
+	
+	<bean name="challenge2" class="acme.entities.Challenge">
+		<property name="title" value="This is challenge 2"/>
+		<property name="deadline" value="2021/06/10 12:00"/>
+		<property name="description" value="This is the description 2"/>
+		<property name="expertGoal" value="Do this one"/>
+		<property name="averageGoal" value="Do that second"/>
+		<property name="rookieGoal" value="Do whatever third"/>
+		<property name="expertReward" value="000001000.00 EUR"/>
+		<property name="averageReward" value="00000400.00 EUR"/>
+		<property name="rookieReward" value="00000200.00 EUR"/>
+	</bean>
+	
+	<bean name="challenge3" class="acme.entities.Challenge">
+		<property name="title" value="This is challenge 3"/>
+		<property name="deadline" value="2020/8/25 12:00"/>
+		<property name="description" value="This is the description 3"/>
+		<property name="expertGoal" value="Do this one"/>
+		<property name="averageGoal" value="Do that second"/>
+		<property name="rookieGoal" value="Do whatever third"/>
+		<property name="expertReward" value="000002000.00 EUR"/>
+		<property name="averageReward" value="00001800.00 EUR"/>
+		<property name="rookieReward" value="00001000.00 EUR"/>
+	</bean>
+
+</beans>
