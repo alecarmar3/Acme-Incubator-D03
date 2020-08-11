@@ -25,4 +25,5 @@ anonymous.notice.form.label.web-links = Web links
 
 ###### Button ######
 
+anonymous.notice.form.button.create = Create
 anonymous.notice.form.button.return = Return

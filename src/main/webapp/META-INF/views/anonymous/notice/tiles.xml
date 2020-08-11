@@ -25,5 +25,9 @@
 	<definition name="anonymous/notice/form" extends="master">
 		<put-attribute name="body" type="template" value="../anonymous/notice/form.jsp"/>
 	</definition>
+	
+	<definition name="anonymous/notice/create" extends="master">
+		<put-attribute name="body" type="template" value="../anonymous/notice/form.jsp" />
+	</definition>
 
 </tiles-definitions>

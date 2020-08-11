@@ -23,6 +23,7 @@
 			<acme:menu-suboption code="master.menu.anonymous.bulletin.list" action="/anonymous/bulletin/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.bulletin.create" action="/anonymous/bulletin/create"/>
 			<acme:menu-suboption code="master.menu.anonymous.notice.list" action="/anonymous/notice/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.notice.create" action="/anonymous/notice/create"/>
 			<acme:menu-suboption code="master.menu.anonymous.technology-record.list" action="/anonymous/technology-record/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.tool-record.list" action="/anonymous/tool-record/list"/>
 			

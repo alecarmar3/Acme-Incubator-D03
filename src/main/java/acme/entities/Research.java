@@ -31,10 +31,12 @@ public class Research extends DomainEntity {
 	@NotBlank
 	private String				title;
 
+	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
 	private Date				creationDate;
 
+	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				deadline;
 

@@ -33,6 +33,7 @@ master.menu.anonymous.favourite-link = Enlace favorito
 master.menu.anonymous.bulletin.list = Ver boletines
 master.menu.anonymous.bulletin.create = Crear boletín
 master.menu.anonymous.notice.list = Listar comunicados
+master.menu.anonymous.notice.create = Crear comunicado
 master.menu.anonymous.technology-record.list = Listar registros de tecnología
 master.menu.anonymous.tool-record.list = Listar registros de herramientas
 
