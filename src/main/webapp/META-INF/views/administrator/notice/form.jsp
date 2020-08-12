@@ -18,10 +18,17 @@
 <acme:form>
 	<acme:form-url code="administrator.notice.form.label.header-picture" path="headerPicture"/>
 	<acme:form-textbox code="administrator.notice.form.label.title" path="title"/>
-	<acme:form-moment code="administrator.notice.form.label.creation-date" path="creationDate"/>
+	
+	<jstl:if test="${command !='create' }">
+	<acme:form-moment code="administrator.notice.form.label.creation-date" path="creationDate" readonly="true"/>
+	</jstl:if>
+	
 	<acme:form-moment code="administrator.notice.form.label.deadline" path="deadline"/>
 	<acme:form-textarea code="administrator.notice.form.label.body" path="body"/>
 	<acme:form-url code="administrator.notice.form.label.web-links" path="webLinks"/>
+	<acme:form-checkbox code="administrator.notice.form.label.confirm-creation" path="accept"/>
+	
+	<acme:form-submit test="${command == 'create'}" code="administrator.notice.form.button.create" action="/administrator/notice/create"/>
 	
   	<acme:form-return code="administrator.notice.form.button.return"/>
 	

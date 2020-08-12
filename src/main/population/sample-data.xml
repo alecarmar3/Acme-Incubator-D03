@@ -44,6 +44,7 @@
 		<property name="category" value="Literature"/>
 	</bean>
 	
+	
 	<!-- Notices -->
 	
 	<bean name="notice1" class="acme.entities.Notice">
@@ -73,6 +74,7 @@
 		<property name="webLinks" value="http://www.link1.com"/>
 	</bean>
 	
+	
 	<!-- Technology Records -->
 	
 	<bean name="technologyRecord1" class="acme.entities.TechnologyRecord">
@@ -95,9 +97,7 @@
 		<property name="description" value="This is a description 2"/>
 		<property name="website" value="http://www.website2.com"/>
 		<property name="email" value="devinkicht@gmail.com"/>
-		<property name="sourceType">
-		<value>OPEN_SOURCE</value>
-		</property>
+		<property name="sourceType" value="OpenSource"/>
 		<property name="stars" value="-2"/>
 	</bean>
 	
@@ -108,9 +108,7 @@
 		<property name="description" value="This is a description 3"/>
 		<property name="website" value="http://www.website3.com"/>
 		<property name="email" value="albertogil@gmail.com"/>
-		<property name="sourceType">
-		<value>CLOSED_SOURCE</value>
-		</property>
+		<property name="sourceType" value="ClosedSource"/>
 		<property name="stars" value="0"/>
 	</bean>
 	
@@ -121,11 +119,10 @@
 		<property name="description" value="This is a description 4"/>
 		<property name="website" value="http://www.website4.com"/>
 		<property name="email" value="clairemonch@gmail.com"/>
-		<property name="sourceType">
-		<value>CLOSED_SOURCE</value>
-		</property>
+		<property name="sourceType" value="ClosedSource"/>
 		<property name="stars" value="3"/>
 	</bean>
+	
 	
 	<!-- Tool Records -->
 	
@@ -136,9 +133,7 @@
 		<property name="description" value="This is a description 1"/>
 		<property name="website" value="http://www.website1.com"/>
 		<property name="email" value="luhalbeiro@gmail.com"/>
-		<property name="sourceType">
-		<value>CLOSED_SOURCE</value>
-		</property>
+		<property name="sourceType" value="ClosedSource"/>
 		<property name="stars" value="0"/>
 	</bean>
 	
@@ -149,9 +144,7 @@
 		<property name="description" value="This is a description 2"/>
 		<property name="website" value="http://www.website2.com"/>
 		<property name="email" value="michaelluks@gmail.com"/>
-		<property name="sourceType">
-		<value>CLOSED_SOURCE</value>
-		</property>
+		<property name="sourceType" value="OpenSource"/>
 		<property name="stars" value="-5"/>
 	</bean>
 	
@@ -162,9 +155,7 @@
 		<property name="description" value="This is a description 3"/>
 		<property name="website" value="http://www.website3.com"/>
 		<property name="email" value="gloriaestevez@gmail.com"/>
-		<property name="sourceType">
-		<value>CLOSED_SOURCE</value>
-		</property>
+		<property name="sourceType" value="OpenSource"/>
 		<property name="stars" value="4"/>
 	</bean>
 	
@@ -175,11 +166,10 @@
 		<property name="description" value="This is a description 4"/>
 		<property name="website" value="http://www.website4.com"/>
 		<property name="email" value="richpghilips@gmail.com"/>
-		<property name="sourceType">
-		<value>CLOSED_SOURCE</value>
-		</property>
+		<property name="sourceType" value="ClosedSource"/>
 		<property name="stars" value="-1"/>
 	</bean>
+	
 	
 	<!-- Inquiries -->
 	
@@ -213,6 +203,7 @@
 		<property name="email" value="inquiry3@gmail.com"/>
 	</bean>
 	
+	
 	<!-- Overtures -->
 	
 	<bean name="overture1" class="acme.entities.Overture">
@@ -244,6 +235,7 @@
 		<property name="moneyMax" value="00002000.00 EUR"/>
 		<property name="email" value="overture3@gmail.com"/>
 	</bean>
+	
 	
 	<!-- Challenges -->
 	
@@ -281,6 +273,42 @@
 		<property name="expertReward" value="000002000.00 EUR"/>
 		<property name="averageReward" value="00001800.00 EUR"/>
 		<property name="rookieReward" value="00001000.00 EUR"/>
+	</bean>
+	
+	
+	<!-- Banners -->
+	
+	<bean name="banner1" class="acme.entities.Banner">
+		<property name="picture" value="http://photo1.com"/>
+		<property name="slogan" value="This is the slogan 1"/>
+		<property name="targetUrl" value="http://targetURL1.com"/>
+		<property name="creditCardNumber" value="4111111111111111"/>
+		<property name="holderName" value="Alberto"/>
+		<property name="brand" value="Visa"/>
+		<property name="expirationDate" value="07/21"/>
+		<property name="cvv" value="542"/>
+	</bean>
+	
+	<bean name="banner2" class="acme.entities.Banner">
+		<property name="picture" value="http://photo2.com"/>
+		<property name="slogan" value="This is the slogan 2"/>
+		<property name="targetUrl" value="http://targetURL2.com"/>
+		<property name="creditCardNumber" value="3222222222222222"/>
+		<property name="holderName" value="Chari"/>
+		<property name="brand" value="MasterCard"/>
+		<property name="expirationDate" value="10/28"/>
+		<property name="cvv" value="912"/>
+	</bean>
+	
+	<bean name="banner3" class="acme.entities.Banner">
+		<property name="picture" value="http://photo3.com"/>
+		<property name="slogan" value="This is the slogan 3"/>
+		<property name="targetUrl" value="http://targetURL3.com"/>
+		<property name="creditCardNumber" value="2333333333333333"/>
+		<property name="holderName" value="Khai"/>
+		<property name="brand" value="AmericanExpress"/>
+		<property name="expirationDate" value="12/20"/>
+		<property name="cvv" value="466"/>
 	</bean>
 
 </beans>

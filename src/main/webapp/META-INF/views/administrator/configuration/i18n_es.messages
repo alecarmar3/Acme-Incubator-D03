@@ -12,6 +12,7 @@ administrator.configuration.form.label.activitySectors = Sectores de actividad
 
 ###### Button ######
 
+administrator.configuration.form.button.update = Actualizar
 administrator.configuration.form.button.return = Volver
 
 ###### Error ######

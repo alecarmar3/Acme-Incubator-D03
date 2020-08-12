@@ -22,7 +22,14 @@ administrator.notice.form.label.creation-date = Fecha de creación
 administrator.notice.form.label.deadline = Fecha de vencimiento
 administrator.notice.form.label.body = Cuerpo
 administrator.notice.form.label.web-links = Enlaces web
+administrator.notice.form.label.confirm-creation = Confirmar creación
 
 ###### Button ######
 
+administrator.notice.form.button.create = Crear
 administrator.notice.form.button.return = Volver
+
+###### Errors ######
+
+administrator.notice.error.past-deadline = La fecha de vencimiento debe estar en el futuro
+administrator.notice.error.must-accept = Debe confirmar la creación

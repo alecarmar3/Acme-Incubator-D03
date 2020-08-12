@@ -18,16 +18,10 @@
 <acme:form>
 	<acme:form-url code="anonymous.notice.form.label.header-picture" path="headerPicture"/>
 	<acme:form-textbox code="anonymous.notice.form.label.title" path="title"/>
-	
-	<jstl:if test="${command != 'create'}">
-		<acme:form-moment code="anonymous.notice.form.label.creation-date" path="creationDate" readonly="true"/>
-	</jstl:if>
-	
+	<acme:form-moment code="anonymous.notice.form.label.creation-date" path="creationDate"/>
 	<acme:form-moment code="anonymous.notice.form.label.deadline" path="deadline"/>
 	<acme:form-textarea code="anonymous.notice.form.label.body" path="body"/>
 	<acme:form-url code="anonymous.notice.form.label.web-links" path="webLinks"/>
-	
-	<acme:form-submit test="${command == 'create'}" code="anonymous.notice.form.button.create" action="/anonymous/notice/create"/>
 	
   	<acme:form-return code="anonymous.notice.form.button.return"/>
   	

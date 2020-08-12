@@ -12,6 +12,7 @@ administrator.configuration.form.label.activitySectors = Activity sectors
 
 ###### Button ######
 
+administrator.configuration.form.button.update = Update
 administrator.configuration.form.button.return = Return
 
 ###### Error ######

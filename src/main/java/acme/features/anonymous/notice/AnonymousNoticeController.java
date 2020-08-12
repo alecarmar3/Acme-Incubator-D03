@@ -17,19 +17,15 @@ import acme.framework.entities.Anonymous;
 public class AnonymousNoticeController extends AbstractController<Anonymous, Notice> {
 
 	@Autowired
-	private AnonymousNoticeListService		listService;
+	private AnonymousNoticeListService	listService;
 
 	@Autowired
-	private AnonymousNoticeShowService		showService;
-
-	@Autowired
-	private AnonymousNoticeCreateService	createService;
+	private AnonymousNoticeShowService	showService;
 
 
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
-		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 	}
 }

@@ -1,5 +1,5 @@
 
-package acme.features.anonymous.notice;
+package acme.features.administrator.notice;
 
 import java.util.Date;
 
@@ -8,18 +8,17 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.Notice;
 import acme.framework.components.Errors;
+import acme.framework.components.HttpMethod;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Anonymous;
+import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractCreateService;
 
 @Service
-public class AnonymousNoticeCreateService implements AbstractCreateService<Anonymous, Notice> {
-
-	// Internal state ---------------------------------------------------------
+public class AdministratorNoticeCreateService implements AbstractCreateService<Administrator, Notice> {
 
 	@Autowired
-	private AnonymousNoticeRepository repository;
+	AdministratorNoticeRepository repository;
 
 
 	@Override
@@ -27,14 +26,6 @@ public class AnonymousNoticeCreateService implements AbstractCreateService<Anony
 		assert request != null;
 
 		return true;
-
-	}
-
-	@Override
-	public void validate(final Request<Notice> request, final Notice entity, final Errors errors) {
-		assert request != null;
-		assert entity != null;
-		assert errors != null;
 	}
 
 	@Override
@@ -42,6 +33,9 @@ public class AnonymousNoticeCreateService implements AbstractCreateService<Anony
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		Date moment = new Date(System.currentTimeMillis() - 1);
+		entity.setCreationDate(moment);
 
 		request.bind(entity, errors, "creationDate");
 	}
@@ -53,12 +47,17 @@ public class AnonymousNoticeCreateService implements AbstractCreateService<Anony
 		assert model != null;
 
 		request.unbind(entity, model, "headerPicture", "title", "deadline", "body", "webLinks");
+
+		if (request.isMethod(HttpMethod.GET)) {
+			model.setAttribute("accept", "false");
+
+		} else {
+			request.transfer(model, "accept");
+		}
 	}
 
 	@Override
 	public Notice instantiate(final Request<Notice> request) {
-		assert request != null;
-
 		Notice result;
 
 		result = new Notice();
@@ -67,14 +66,30 @@ public class AnonymousNoticeCreateService implements AbstractCreateService<Anony
 	}
 
 	@Override
-	public void create(final Request<Notice> request, final Notice entity) {
+	public void validate(final Request<Notice> request, final Notice entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
+		assert errors != null;
 
-		Date creationDate;
+		if (!errors.hasErrors("deadline")) {
+			Boolean isFuture = entity.getDeadline().after(new Date());
+			errors.state(request, isFuture, "deadline", "administrator.notice.error.past-deadline", entity.getDeadline());
+		}
 
-		creationDate = new Date(System.currentTimeMillis() - 1);
-		entity.setCreationDate(creationDate);
+		if (!errors.hasErrors("accept")) {
+			Boolean isChecked = request.getModel().getBoolean("accept");
+			errors.state(request, isChecked, "accept", "administrator.notice.error.must-accept");
+		}
+
+	}
+
+	@Override
+	public void create(final Request<Notice> request, final Notice entity) {
+
+		Date moment;
+
+		moment = new Date(System.currentTimeMillis() - 1);
+		entity.setCreationDate(moment);
 
 		this.repository.save(entity);
 	}
