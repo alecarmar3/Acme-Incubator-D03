@@ -1,7 +1,12 @@
 
 package acme.entities;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import javax.persistence.Entity;
+import javax.persistence.Transient;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 
@@ -31,5 +36,15 @@ public class Configuration extends DomainEntity {
 
 	@NotBlank
 	private String				activitySectors;
+
+
+	@Transient
+	public List<String> activitySectorsToList() {
+		List<String> activitySectorsToList = new ArrayList<String>();
+
+		activitySectorsToList = Arrays.asList(this.activitySectors.split(", "));
+
+		return activitySectorsToList;
+	}
 
 }

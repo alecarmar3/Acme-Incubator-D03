@@ -45,8 +45,8 @@ public class Record extends DomainEntity {
 	@Email
 	private String				email;
 
-	@NotNull
-	private SourceType			sourceType;
+	@NotBlank
+	private String				sourceType;
 
 	@NotNull
 	@Min(-5)

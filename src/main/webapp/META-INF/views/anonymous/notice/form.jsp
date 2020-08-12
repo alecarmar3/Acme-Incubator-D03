@@ -24,5 +24,6 @@
 	<acme:form-url code="anonymous.notice.form.label.web-links" path="webLinks"/>
 	
   	<acme:form-return code="anonymous.notice.form.button.return"/>
+  	
 	
 </acme:form>
