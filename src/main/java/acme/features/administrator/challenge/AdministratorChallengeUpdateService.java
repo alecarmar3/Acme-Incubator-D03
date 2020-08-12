@@ -68,7 +68,9 @@ public class AdministratorChallengeUpdateService implements AbstractUpdateServic
 		if (!errors.hasErrors("rookieReward")) {
 			Boolean rookieRewardEuros = entity.getRookieReward().getCurrency().matches("€|EUROS|Euros|euros|EUR|Eur|eur");
 			errors.state(request, rookieRewardEuros, "rookieReward", "administrator.challenge.error.wrong-currency", entity.getRookieReward());
+		}
 
+		if (!errors.hasErrors("rookieReward")) {
 			Boolean lowerThanAverage = entity.getAverageReward().getAmount() > entity.getRookieReward().getAmount();
 			errors.state(request, lowerThanAverage, "rookieReward", "administrator.challenge.error.average-higher-than-rookie");
 		}
@@ -76,15 +78,19 @@ public class AdministratorChallengeUpdateService implements AbstractUpdateServic
 		if (!errors.hasErrors("averageReward")) {
 			Boolean averageRewardEuros = entity.getAverageReward().getCurrency().matches("€|EUROS|Euros|euros|EUR|Eur|eur");
 			errors.state(request, averageRewardEuros, "averageReward", "administrator.challenge.error.wrong-currency", entity.getAverageReward());
+		}
 
+		if (!errors.hasErrors("averageReward")) {
 			Boolean higherThanRookie = entity.getAverageReward().getAmount() > entity.getRookieReward().getAmount();
 			errors.state(request, higherThanRookie, "averageReward", "administrator.challenge.error.average-lower-than-rookie");
 		}
 
 		if (!errors.hasErrors("expertReward")) {
-			Boolean ExpertRewardEuros = entity.getExpertReward().getCurrency().matches("€|EUROS|Euros|euros|EUR|Eur|eur");
-			errors.state(request, ExpertRewardEuros, "expertReward", "administrator.challenge.error.wrong-currency", entity.getExpertReward());
+			Boolean expertRewardEuros = entity.getExpertReward().getCurrency().matches("€|EUROS|Euros|euros|EUR|Eur|eur");
+			errors.state(request, expertRewardEuros, "expertReward", "administrator.challenge.error.wrong-currency", entity.getExpertReward());
+		}
 
+		if (!errors.hasErrors("expertReward")) {
 			Boolean higherThanAverage = entity.getExpertReward().getAmount() > entity.getAverageReward().getAmount();
 			errors.state(request, higherThanAverage, "expertReward", "administrator.challenge.error.expert-lower-than-average");
 		}

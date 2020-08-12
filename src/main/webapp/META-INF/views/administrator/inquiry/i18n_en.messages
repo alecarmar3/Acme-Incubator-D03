@@ -22,7 +22,7 @@ administrator.inquiry.form.label.creation-date = Creation date
 administrator.inquiry.form.label.deadline = Deadline
 administrator.inquiry.form.label.body = Body
 administrator.inquiry.form.label.money-min = Minimum money
-administrator.inquiry.form.label.money-max = Máximum money
+administrator.inquiry.form.label.money-max = Maximum money
 administrator.inquiry.form.label.email = Email
 
 ###### Button ######

@@ -84,9 +84,7 @@
 		<property name="description" value="This is a description 1"/>
 		<property name="website" value="http://www.website1.com"/>
 		<property name="email" value="kfunlai@gmail.com"/>
-		<property name="sourceType">
-		<value>OPEN_SOURCE</value>
-		</property>
+		<property name="sourceType" value="OpenSource"/>
 		<property name="stars" value="3"/>
 	</bean>
 	

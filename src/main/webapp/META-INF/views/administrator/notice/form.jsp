@@ -26,7 +26,10 @@
 	<acme:form-moment code="administrator.notice.form.label.deadline" path="deadline"/>
 	<acme:form-textarea code="administrator.notice.form.label.body" path="body"/>
 	<acme:form-url code="administrator.notice.form.label.web-links" path="webLinks"/>
+	
+	<jstl:if test="${command =='create' }">
 	<acme:form-checkbox code="administrator.notice.form.label.confirm-creation" path="accept"/>
+	</jstl:if>
 	
 	<acme:form-submit test="${command == 'create'}" code="administrator.notice.form.button.create" action="/administrator/notice/create"/>
 	
