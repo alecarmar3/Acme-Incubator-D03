@@ -19,6 +19,7 @@ administrator.tool-record.list.label.stars = Estrellas
 administrator.tool-record.form.label.title = Título
 administrator.tool-record.form.label.activity-sector = Sector de la actividad
 administrator.tool-record.form.label.inventor-name = Nombre del inventor
+administrator.tool-record.form.label.update-date = Fecha de actualización
 administrator.tool-record.form.label.description = Descripción
 administrator.tool-record.form.label.website = Sitio web
 administrator.tool-record.form.label.email = Correo electrónico

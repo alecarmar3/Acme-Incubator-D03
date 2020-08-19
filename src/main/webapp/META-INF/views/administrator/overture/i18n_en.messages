@@ -19,6 +19,7 @@ administrator.overture.list.label.money-max = Maximum money
 
 administrator.overture.form.label.title = Title
 administrator.overture.form.label.creation-date = Creation date
+administrator.overture.form.label.update-date = Update date
 administrator.overture.form.label.deadline = Deadline
 administrator.overture.form.label.body = Body
 administrator.overture.form.label.money-min = Minimum money

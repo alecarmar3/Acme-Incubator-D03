@@ -29,7 +29,7 @@ public class AdministratorTechnologyRecordShowService implements AbstractShowSer
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "activitySector", "inventorName", "description", "website", "email", "sourceType", "stars");
+		request.unbind(entity, model, "title", "activitySector", "inventorName", "updateDate", "description", "website", "email", "sourceType", "stars");
 	}
 
 	@Override

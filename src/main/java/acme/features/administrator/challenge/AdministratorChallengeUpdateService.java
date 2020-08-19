@@ -43,7 +43,7 @@ public class AdministratorChallengeUpdateService implements AbstractUpdateServic
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "deadline", "description", "goldGoal", "silverGoal", "bronzeGoal", "goldReward", "silverReward", "bronzeReward");
+		request.unbind(entity, model, "title", "deadline", "updateDate", "description", "goldGoal", "silverGoal", "bronzeGoal", "goldReward", "silverReward", "bronzeReward");
 	}
 
 	@Override
@@ -113,6 +113,9 @@ public class AdministratorChallengeUpdateService implements AbstractUpdateServic
 	public void update(final Request<Challenge> request, final Challenge entity) {
 		assert request != null;
 		assert entity != null;
+
+		Date moment = new Date(System.currentTimeMillis() - 1);
+		entity.setUpdateDate(moment);
 
 		this.repository.save(entity);
 	}

@@ -19,6 +19,7 @@ administrator.inquiry.list.label.money-max = Maximum money
 
 administrator.inquiry.form.label.title = Title
 administrator.inquiry.form.label.creation-date = Creation date
+administrator.inquiry.form.label.update-date = Update date
 administrator.inquiry.form.label.deadline = Deadline
 administrator.inquiry.form.label.body = Body
 administrator.inquiry.form.label.money-min = Minimum money

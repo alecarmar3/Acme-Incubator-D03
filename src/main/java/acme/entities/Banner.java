@@ -1,8 +1,14 @@
 
 package acme.entities;
 
+import java.util.Date;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.CreditCardNumber;
@@ -30,10 +36,15 @@ public class Banner extends DomainEntity {
 	@NotBlank
 	private String				slogan;
 
+	@Temporal(TemporalType.TIMESTAMP)
+	@Past
+	private Date				updateDate;
+
 	@NotBlank
 	@URL
 	private String				targetUrl;
 
+	@Column(unique = true)
 	@NotBlank
 	@CreditCardNumber
 	private String				creditCardNumber; //number

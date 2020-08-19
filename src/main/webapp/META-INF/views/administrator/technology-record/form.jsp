@@ -19,6 +19,9 @@
 	<acme:form-textbox code="administrator.technology-record.form.label.title" path="title"/>
 	<acme:form-textbox code="administrator.technology-record.form.label.activity-sector" path="activitySector"/>
 	<acme:form-textbox code="administrator.technology-record.form.label.inventor-name" path="inventorName"/>
+	<jstl:if test="${command !='update' }">
+	<acme:form-moment code="administrator.technology-record.form.label.update-date" path="updateDate" readonly="true"/>
+	</jstl:if>
 	<acme:form-textarea code="administrator.technology-record.form.label.description" path="description"/>
 	<acme:form-url code="administrator.technology-record.form.label.website" path="website"/>
 	<acme:form-textbox code="administrator.technology-record.form.label.email" path="email"/>

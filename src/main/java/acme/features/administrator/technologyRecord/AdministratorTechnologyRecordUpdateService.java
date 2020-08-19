@@ -1,6 +1,8 @@
 
 package acme.features.administrator.technologyRecord;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -41,7 +43,7 @@ public class AdministratorTechnologyRecordUpdateService implements AbstractUpdat
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "activitySector", "inventorName", "description", "website", "email", "sourceType", "stars");
+		request.unbind(entity, model, "title", "activitySector", "inventorName", "updateDate", "description", "website", "email", "sourceType", "stars");
 	}
 
 	@Override
@@ -82,6 +84,9 @@ public class AdministratorTechnologyRecordUpdateService implements AbstractUpdat
 	public void update(final Request<TechnologyRecord> request, final TechnologyRecord entity) {
 		assert request != null;
 		assert entity != null;
+
+		Date moment = new Date(System.currentTimeMillis() - 1);
+		entity.setUpdateDate(moment);
 
 		this.repository.save(entity);
 	}

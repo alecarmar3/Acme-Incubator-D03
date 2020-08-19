@@ -18,6 +18,7 @@ administrator.banner.list.label.targetUrl = URL objetivo
 
 administrator.banner.form.label.picture = Imagen
 administrator.banner.form.label.slogan = Slogan
+administrator.banner.form.label.update-date = Fecha de actualización
 administrator.banner.form.label.targetUrl = URL objetivo
 administrator.banner.form.label.creditCardNumber = Número de tarjeta de crédito
 administrator.banner.form.label.holderName = Nombre del titular
