@@ -29,7 +29,7 @@ public class AdministratorInquiryShowService implements AbstractShowService<Admi
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "creationDate", "deadline", "body", "moneyMin", "moneyMax", "email");
+		request.unbind(entity, model, "title", "creationDate", "updateDate", "deadline", "body", "moneyMin", "moneyMax", "email");
 	}
 
 	@Override

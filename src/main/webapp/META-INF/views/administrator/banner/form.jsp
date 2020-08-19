@@ -18,6 +18,9 @@
 <acme:form>
 	<acme:form-textbox code="administrator.banner.form.label.picture" path="picture"/>
 	<acme:form-textbox code="administrator.banner.form.label.slogan" path="slogan"/>
+	<jstl:if test="${command !='update' }">
+	<acme:form-moment code="administrator.banner.form.label.update-date" path="updateDate" readonly="true"/>
+	</jstl:if>
 	<acme:form-textbox code="administrator.banner.form.label.targetUrl" path="targetUrl"/>
 	<acme:form-textbox code="administrator.banner.form.label.creditCardNumber" path="creditCardNumber"/>
 	<acme:form-textbox code="administrator.banner.form.label.holderName" path="holderName"/>

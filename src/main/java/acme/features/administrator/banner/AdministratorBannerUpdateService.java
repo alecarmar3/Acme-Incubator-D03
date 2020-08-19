@@ -2,6 +2,7 @@
 package acme.features.administrator.banner;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -42,7 +43,7 @@ public class AdministratorBannerUpdateService implements AbstractUpdateService<A
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "picture", "slogan", "targetUrl", "creditCardNumber", "holderName", "brand", "expirationDate", "cvv");
+		request.unbind(entity, model, "picture", "slogan", "updateDate", "targetUrl", "creditCardNumber", "holderName", "brand", "expirationDate", "cvv");
 	}
 
 	@Override
@@ -79,7 +80,9 @@ public class AdministratorBannerUpdateService implements AbstractUpdateService<A
 			boolean monthInRange = month >= 1 && month <= 12;
 
 			errors.state(request, validYear, "expirationDate", "administrator.banner.error.timed-out-credit-card-year");
-			errors.state(request, validMonth, "expirationDate", "administrator.banner.error.timed-out-credit-card-month");
+			if (year == now.getYear() - 2000) {
+				errors.state(request, validMonth, "expirationDate", "administrator.banner.error.timed-out-credit-card-month");
+			}
 			errors.state(request, monthInRange, "expirationDate", "administrator.banner.error.inexistent-month");
 
 		}
@@ -90,6 +93,9 @@ public class AdministratorBannerUpdateService implements AbstractUpdateService<A
 	public void update(final Request<Banner> request, final Banner entity) {
 		assert request != null;
 		assert entity != null;
+
+		Date moment = new Date(System.currentTimeMillis() - 1);
+		entity.setUpdateDate(moment);
 
 		this.repository.save(entity);
 	}

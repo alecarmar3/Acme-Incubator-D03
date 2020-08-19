@@ -42,7 +42,7 @@ public class AdministratorOvertureUpdateService implements AbstractUpdateService
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "deadline", "body", "moneyMin", "moneyMax", "email");
+		request.unbind(entity, model, "title", "deadline", "updateDate", "body", "moneyMin", "moneyMax", "email");
 	}
 
 	@Override
@@ -90,6 +90,9 @@ public class AdministratorOvertureUpdateService implements AbstractUpdateService
 	public void update(final Request<Overture> request, final Overture entity) {
 		assert request != null;
 		assert entity != null;
+
+		Date moment = new Date(System.currentTimeMillis() - 1);
+		entity.setUpdateDate(moment);
 
 		this.repository.save(entity);
 	}

@@ -29,7 +29,7 @@ public class AdministratorChallengeShowService implements AbstractShowService<Ad
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "deadline", "description", "expertGoal", "averageGoal", "rookieGoal", "expertReward", "averageReward", "rookieReward");
+		request.unbind(entity, model, "title", "deadline", "updateDate", "description", "expertGoal", "averageGoal", "rookieGoal", "expertReward", "averageReward", "rookieReward");
 	}
 
 	@Override

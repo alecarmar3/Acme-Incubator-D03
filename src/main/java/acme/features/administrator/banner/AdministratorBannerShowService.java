@@ -29,7 +29,7 @@ public class AdministratorBannerShowService implements AbstractShowService<Admin
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "picture", "slogan", "targetUrl", "creditCardNumber", "holderName", "brand", "expirationDate", "cvv");
+		request.unbind(entity, model, "picture", "slogan", "updateDate", "targetUrl", "creditCardNumber", "holderName", "brand", "expirationDate", "cvv");
 	}
 
 	@Override

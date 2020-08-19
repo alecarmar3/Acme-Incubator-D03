@@ -36,6 +36,10 @@ public class Research extends DomainEntity {
 	@Past
 	private Date				creationDate;
 
+	@Temporal(TemporalType.TIMESTAMP)
+	@Past
+	private Date				updateDate;
+
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				deadline;

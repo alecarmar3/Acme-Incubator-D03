@@ -19,6 +19,7 @@ administrator.tool-record.list.label.stars = Stars
 administrator.tool-record.form.label.title = Title
 administrator.tool-record.form.label.activity-sector = Activity sector
 administrator.tool-record.form.label.inventor-name = Inventor name
+administrator.tool-record.form.label.update-date = Update date
 administrator.tool-record.form.label.description = Description
 administrator.tool-record.form.label.website = Website
 administrator.tool-record.form.label.email = Email

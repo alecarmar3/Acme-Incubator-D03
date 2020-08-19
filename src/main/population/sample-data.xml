@@ -81,6 +81,7 @@
 		<property name="title" value="Technology title 1"/>
 		<property name="activitySector" value="Technology"/>
 		<property name="inventorName" value="Kfun Lai"/>
+		<property name="updateDate" value="2020/6/25 12:00"/>
 		<property name="description" value="This is a description 1"/>
 		<property name="website" value="http://www.website1.com"/>
 		<property name="email" value="kfunlai@gmail.com"/>
@@ -92,6 +93,7 @@
 		<property name="title" value="Technology title 2"/>
 		<property name="activitySector" value="Health"/>
 		<property name="inventorName" value="Devin Kicht"/>
+		<property name="updateDate" value="2020/6/25 12:00"/>
 		<property name="description" value="This is a description 2"/>
 		<property name="website" value="http://www.website2.com"/>
 		<property name="email" value="devinkicht@gmail.com"/>
@@ -103,6 +105,7 @@
 		<property name="title" value="Technology title 3"/>
 		<property name="activitySector" value="Health"/>
 		<property name="inventorName" value="Alberto Gil"/>
+		<property name="updateDate" value="2020/6/25 12:00"/>
 		<property name="description" value="This is a description 3"/>
 		<property name="website" value="http://www.website3.com"/>
 		<property name="email" value="albertogil@gmail.com"/>
@@ -114,6 +117,7 @@
 		<property name="title" value="Technology title 4"/>
 		<property name="activitySector" value="Health"/>
 		<property name="inventorName" value="Claire Monch"/>
+		<property name="updateDate" value="2020/6/25 12:00"/>
 		<property name="description" value="This is a description 4"/>
 		<property name="website" value="http://www.website4.com"/>
 		<property name="email" value="clairemonch@gmail.com"/>
@@ -128,6 +132,7 @@
 		<property name="title" value="Tool title 1"/>
 		<property name="activitySector" value="Technology"/>
 		<property name="inventorName" value="Luh Albeiro"/>
+		<property name="updateDate" value="2020/6/25 12:00"/>
 		<property name="description" value="This is a description 1"/>
 		<property name="website" value="http://www.website1.com"/>
 		<property name="email" value="luhalbeiro@gmail.com"/>
@@ -139,6 +144,7 @@
 		<property name="title" value="Tool title 2"/>
 		<property name="activitySector" value="Arts"/>
 		<property name="inventorName" value="Michael Luks"/>
+		<property name="updateDate" value="2020/6/25 12:00"/>
 		<property name="description" value="This is a description 2"/>
 		<property name="website" value="http://www.website2.com"/>
 		<property name="email" value="michaelluks@gmail.com"/>
@@ -150,6 +156,7 @@
 		<property name="title" value="Tool title 3"/>
 		<property name="activitySector" value="Business"/>
 		<property name="inventorName" value="Gloria Estevez"/>
+		<property name="updateDate" value="2020/6/25 12:00"/>
 		<property name="description" value="This is a description 3"/>
 		<property name="website" value="http://www.website3.com"/>
 		<property name="email" value="gloriaestevez@gmail.com"/>
@@ -161,6 +168,7 @@
 		<property name="title" value="Tool title 4"/>
 		<property name="activitySector" value="Health"/>
 		<property name="inventorName" value="Rich Philips"/>
+		<property name="updateDate" value="2020/6/25 12:00"/>
 		<property name="description" value="This is a description 4"/>
 		<property name="website" value="http://www.website4.com"/>
 		<property name="email" value="richpghilips@gmail.com"/>
@@ -174,6 +182,7 @@
 	<bean name="inquiry1" class="acme.entities.Inquiry">
 		<property name="title" value="Inquiry 1"/>
 		<property name="creationDate" value="2016/01/14 12:00"/>
+		<property name="updateDate" value="2020/6/25 12:00"/>
 		<property name="deadline" value="2019/11/28 12:00"/>
 		<property name="body" value="This is a body 1"/>
 		<property name="moneyMin" value="00000600.00 EUR"/>
@@ -184,6 +193,7 @@
 	<bean name="inquiry2" class="acme.entities.Inquiry">
 		<property name="title" value="Inquiry 2"/>
 		<property name="creationDate" value="2019/12/04 12:00"/>
+		<property name="updateDate" value="2020/6/25 12:00"/>
 		<property name="deadline" value="2020/11/01 12:00"/>
 		<property name="body" value="This is a body 2"/>
 		<property name="moneyMin" value="00000100.00 EUR"/>
@@ -194,6 +204,7 @@
 	<bean name="inquiry3" class="acme.entities.Inquiry">
 		<property name="title" value="Inquiry 3"/>
 		<property name="creationDate" value="2020/06/13 12:00"/>
+		<property name="updateDate" value="2020/6/25 12:00"/>
 		<property name="deadline" value="2020/09/30 12:00"/>
 		<property name="body" value="This is a body 3"/>
 		<property name="moneyMin" value="00001600.00 EUR"/>
@@ -207,6 +218,7 @@
 	<bean name="overture1" class="acme.entities.Overture">
 		<property name="title" value="Overture 1"/>
 		<property name="creationDate" value="2016/01/14 12:00"/>
+		<property name="updateDate" value="2020/6/25 12:00"/>
 		<property name="deadline" value="2019/11/28 12:00"/>
 		<property name="body" value="This is a body 1"/>
 		<property name="moneyMin" value="00000100.00 EUR"/>
@@ -217,6 +229,7 @@
 	<bean name="overture2" class="acme.entities.Overture">
 		<property name="title" value="Overture 2"/>
 		<property name="creationDate" value="2019/12/04 12:00"/>
+		<property name="updateDate" value="2020/6/25 12:00"/>
 		<property name="deadline" value="2020/11/01 12:00"/>
 		<property name="body" value="This is a body 2"/>
 		<property name="moneyMin" value="00000800.00 EUR"/>
@@ -227,6 +240,7 @@
 	<bean name="overture3" class="acme.entities.Overture">
 		<property name="title" value="Overture 3"/>
 		<property name="creationDate" value="2020/06/13 12:00"/>
+		<property name="updateDate" value="2020/6/25 12:00"/>
 		<property name="deadline" value="2020/09/30 12:00"/>
 		<property name="body" value="This is a body 3"/>
 		<property name="moneyMin" value="00001500.00 EUR"/>
@@ -240,6 +254,7 @@
 	<bean name="challenge1" class="acme.entities.Challenge">
 		<property name="title" value="This is challenge 1"/>
 		<property name="deadline" value="2021/01/14 12:00"/>
+		<property name="updateDate" value="2020/6/25 12:00"/>
 		<property name="description" value="This is the description 1"/>
 		<property name="expertGoal" value="Do this one"/>
 		<property name="averageGoal" value="Do that second"/>
@@ -252,6 +267,7 @@
 	<bean name="challenge2" class="acme.entities.Challenge">
 		<property name="title" value="This is challenge 2"/>
 		<property name="deadline" value="2021/06/10 12:00"/>
+		<property name="updateDate" value="2020/6/25 12:00"/>
 		<property name="description" value="This is the description 2"/>
 		<property name="expertGoal" value="Do this one"/>
 		<property name="averageGoal" value="Do that second"/>
@@ -264,6 +280,7 @@
 	<bean name="challenge3" class="acme.entities.Challenge">
 		<property name="title" value="This is challenge 3"/>
 		<property name="deadline" value="2020/8/25 12:00"/>
+		<property name="updateDate" value="2020/6/25 12:00"/>
 		<property name="description" value="This is the description 3"/>
 		<property name="expertGoal" value="Do this one"/>
 		<property name="averageGoal" value="Do that second"/>
@@ -279,6 +296,7 @@
 	<bean name="banner1" class="acme.entities.Banner">
 		<property name="picture" value="http://photo1.com"/>
 		<property name="slogan" value="This is the slogan 1"/>
+		<property name="updateDate" value="2020/6/25 12:00"/>
 		<property name="targetUrl" value="http://targetURL1.com"/>
 		<property name="creditCardNumber" value="4111111111111111"/>
 		<property name="holderName" value="Alberto"/>
@@ -290,6 +308,7 @@
 	<bean name="banner2" class="acme.entities.Banner">
 		<property name="picture" value="http://photo2.com"/>
 		<property name="slogan" value="This is the slogan 2"/>
+		<property name="updateDate" value="2020/6/25 12:00"/>
 		<property name="targetUrl" value="http://targetURL2.com"/>
 		<property name="creditCardNumber" value="3222222222222222"/>
 		<property name="holderName" value="Chari"/>
@@ -301,6 +320,7 @@
 	<bean name="banner3" class="acme.entities.Banner">
 		<property name="picture" value="http://photo3.com"/>
 		<property name="slogan" value="This is the slogan 3"/>
+		<property name="updateDate" value="2020/6/25 12:00"/>
 		<property name="targetUrl" value="http://targetURL3.com"/>
 		<property name="creditCardNumber" value="2333333333333333"/>
 		<property name="holderName" value="Khai"/>

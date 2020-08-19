@@ -18,6 +18,9 @@
 <acme:form>
 	<acme:form-textbox code="administrator.challenge.form.label.title" path="title"/>
 	<acme:form-moment code="administrator.challenge.form.label.deadline" path="deadline"/>
+	<jstl:if test="${command !='update' }">
+	<acme:form-moment code="administrator.challenge.form.label.update-date" path="updateDate" readonly="true"/>
+	</jstl:if>
 	<acme:form-textarea code="administrator.challenge.form.label.description" path="description"/>
 	<acme:form-textbox code="administrator.challenge.form.label.expert-goal" path="expertGoal"/>
 	<acme:form-textbox code="administrator.challenge.form.label.average-goal" path="averageGoal"/>

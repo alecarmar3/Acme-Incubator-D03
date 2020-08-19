@@ -31,6 +31,7 @@
         `picture` varchar(255),
         `slogan` varchar(255),
         `target_url` varchar(255),
+        `update_date` datetime(6),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -60,6 +61,7 @@
         `rookie_reward_amount` double precision,
         `rookie_reward_currency` varchar(255),
         `title` varchar(255),
+        `update_date` datetime(6),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -93,6 +95,7 @@
         `money_min_amount` double precision,
         `money_min_currency` varchar(255),
         `title` varchar(255),
+        `update_date` datetime(6),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -120,6 +123,7 @@
         `money_min_amount` double precision,
         `money_min_currency` varchar(255),
         `title` varchar(255),
+        `update_date` datetime(6),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -142,6 +146,7 @@
         `source_type` varchar(255),
         `stars` integer,
         `title` varchar(255),
+        `update_date` datetime(6),
         `website` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
@@ -158,6 +163,7 @@
         `money_min_amount` double precision,
         `money_min_currency` varchar(255),
         `title` varchar(255),
+        `update_date` datetime(6),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -171,6 +177,7 @@
         `source_type` varchar(255),
         `stars` integer,
         `title` varchar(255),
+        `update_date` datetime(6),
         `website` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
@@ -185,6 +192,7 @@
         `source_type` varchar(255),
         `stars` integer,
         `title` varchar(255),
+        `update_date` datetime(6),
         `website` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
@@ -206,6 +214,13 @@
     ) engine=InnoDB;
 
     insert into `hibernate_sequence` values ( 1 );
+
+    alter table `banner` 
+       add constraint UK_p8qqa0apsb9hsacl8y4mie6m unique (`credit_card_number`);
+create index IDXnr284tes3x8hnd3h716tmb3fr on `challenge` (`deadline`);
+create index IDX9u3lu85o98y0tro95qasghg8e on `inquiry` (`deadline`);
+create index IDXrcpel5hblr62lfjr9gmpk2wgi on `notice` (`deadline`);
+create index IDX3ianip0mmnj1316lpeas2yw71 on `overture` (`deadline`);
 
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);
