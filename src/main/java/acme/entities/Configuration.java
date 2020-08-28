@@ -21,11 +21,7 @@ import lombok.Setter;
 @Setter
 public class Configuration extends DomainEntity {
 
-	// Serialization identifier -----------------------------------------------
-
 	private static final long	serialVersionUID	= 1L;
-
-	// Attributes --------------------------------------------------------------
 
 	@NotBlank
 	private String				spamWords;
