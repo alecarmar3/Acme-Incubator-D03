@@ -22,11 +22,7 @@ import lombok.Setter;
 @Setter
 public class Research extends DomainEntity {
 
-	// Serialization identifier -----------------------------------------------
-
 	private static final long	serialVersionUID	= 1L;
-
-	// Attributes --------------------------------------------------------------
 
 	@NotBlank
 	private String				title;

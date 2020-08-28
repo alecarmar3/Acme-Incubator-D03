@@ -19,11 +19,7 @@ import lombok.Setter;
 @Setter
 public class Bulletin extends DomainEntity {
 
-	// Serialization identifier -----------------------------------------------
-
 	private static final long	serialVersionUID	= 1L;
-
-	// Attributes --------------------------------------------------------------
 
 	@NotBlank
 	private String				author;

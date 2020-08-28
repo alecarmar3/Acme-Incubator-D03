@@ -214,9 +214,6 @@
     ) engine=InnoDB;
 
     insert into `hibernate_sequence` values ( 1 );
-
-    alter table `banner` 
-       add constraint UK_p8qqa0apsb9hsacl8y4mie6m unique (`credit_card_number`);
 create index IDXnr284tes3x8hnd3h716tmb3fr on `challenge` (`deadline`);
 create index IDX9u3lu85o98y0tro95qasghg8e on `inquiry` (`deadline`);
 create index IDXrcpel5hblr62lfjr9gmpk2wgi on `notice` (`deadline`);

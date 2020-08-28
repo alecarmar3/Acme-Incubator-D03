@@ -14,7 +14,6 @@ import acme.framework.services.AbstractListService;
 
 @Service
 public class AuthenticatedBulletinListService implements AbstractListService<Authenticated, Bulletin> {
-	// Internal State --------------------------------------------------
 
 	@Autowired
 	AuthenticatedBulletinRepository repository;

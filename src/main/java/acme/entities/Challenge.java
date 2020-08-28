@@ -26,11 +26,7 @@ import lombok.Setter;
 })
 public class Challenge extends DomainEntity {
 
-	// Serialization identifier -----------------------------------------------
-
 	private static final long	serialVersionUID	= 1L;
-
-	// Attributes --------------------------------------------------------------
 
 	@NotBlank
 	private String				title;
