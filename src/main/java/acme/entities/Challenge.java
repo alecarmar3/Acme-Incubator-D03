@@ -13,6 +13,8 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 
+import org.hibernate.validator.constraints.Length;
+
 import acme.framework.datatypes.Money;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -29,6 +31,7 @@ public class Challenge extends DomainEntity {
 	private static final long	serialVersionUID	= 1L;
 
 	@NotBlank
+	@Length(max = 250)
 	private String				title;
 
 	@NotNull
@@ -40,15 +43,19 @@ public class Challenge extends DomainEntity {
 	private Date				updateDate;
 
 	@NotBlank
+	@Length(max = 250)
 	private String				description;
 
 	@NotBlank
+	@Length(max = 250)
 	private String				expertGoal;
 
 	@NotBlank
+	@Length(max = 250)
 	private String				averageGoal;
 
 	@NotBlank
+	@Length(max = 250)
 	private String				rookieGoal;
 
 	@NotNull

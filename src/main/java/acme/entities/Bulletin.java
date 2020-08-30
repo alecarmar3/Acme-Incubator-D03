@@ -10,6 +10,8 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 
+import org.hibernate.validator.constraints.Length;
+
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -22,12 +24,15 @@ public class Bulletin extends DomainEntity {
 	private static final long	serialVersionUID	= 1L;
 
 	@NotBlank
+	@Length(max = 250)
 	private String				author;
 
 	@NotBlank
+	@Length(max = 250)
 	private String				title;
 
 	@NotBlank
+	@Length(max = 250)
 	private String				text;
 
 	@NotNull
@@ -36,6 +41,7 @@ public class Bulletin extends DomainEntity {
 	private Date				moment;
 
 	@NotBlank
+	@Length(max = 250)
 	private String				category;
 
 }
