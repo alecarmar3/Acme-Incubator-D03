@@ -12,6 +12,8 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 
+import org.hibernate.validator.constraints.Length;
+
 import acme.framework.datatypes.Money;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -25,6 +27,7 @@ public class Research extends DomainEntity {
 	private static final long	serialVersionUID	= 1L;
 
 	@NotBlank
+	@Length(max = 250)
 	private String				title;
 
 	@NotNull
@@ -41,6 +44,7 @@ public class Research extends DomainEntity {
 	private Date				deadline;
 
 	@NotBlank
+	@Length(max = 250)
 	private String				body;
 
 	@NotNull
@@ -53,6 +57,7 @@ public class Research extends DomainEntity {
 
 	@NotBlank
 	@Email
+	@Length(max = 250)
 	private String				email;
 
 }
